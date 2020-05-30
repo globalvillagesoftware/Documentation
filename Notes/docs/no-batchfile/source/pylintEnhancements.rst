@@ -35,9 +35,9 @@ Specifically, I want to be able to define regular expressions for the names of
 objects that may be encountered at any level. Other uses for fine grained
 structural classifications may suggest themselves in the future.
 
-It is possible that he implementation of this feature may require modifications
-to the `astroid` module that is used by `Pylint` to access the `AST` for a
-module. `Python` itself, is used to generate the `AST`.
+It is possible that the implementation of this feature may require
+modifications to the `astroid` module that is used by `Pylint` to access the 
+`AST` for a module. `Python` itself, is used to generate the `AST`.
 
 *******************
 Regular Expressions

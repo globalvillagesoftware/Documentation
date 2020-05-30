@@ -13,5 +13,7 @@ This takes us to the place where the source code for the credential helper
 resides.
 `sudo make` |br| 
 This compiles the source code to create a runnable piece of code.
-`git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret` |br| 
-This tell `Git` where to find the credential helper to be used.
+`git config --global credential.helper
+/usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret` |br| 
+This tell `Git` where to find the credential helper to be used. This command
+supports any use of `Git` by the user who runs this command.

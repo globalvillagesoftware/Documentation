@@ -1,0 +1,62 @@
+############################################
+Install Python 3.8.3 on Ubuntu 20.04 Desktop
+############################################
+
+********
+Overview
+********
+
+This turns out to be quite a laborious job. This is due to a number of corner
+cases that are encountered when installing Python on Linux and it all has to be
+done manually from the command line. Therefore, I felt it was useful to
+document a successful full installation of Python on Ubuntu.
+
+The reasons for difficulty include:
+* Python for Linux must be built and installed from source code.
+* Ubuntu already has Python 3.8.2 installed and it is used for many components
+  of Ubuntu. It is important that the default installation of Python on Ubuntu
+  should not be disrupted by the installation of another version of Python.
+  
+  Python includes a number of optional modules. These modules are not built
+  unless the source prerequisites for these modules are present on Ubuntu. If
+  you want a complete version of Python you will need to install the
+  dependencies of these modules before compiling Python. The compile process
+  suggests that you look in the function detect-  modules in the source file
+  setup.py for module names of the necessary prerequisites but the tests
+  contained there are testing whether components within the source dependencies
+  are available and this gives little guidance or help on finding the source
+  dependencies themselves. You are on your own here.
+ 
+ There are several optional modules that do not have their prerequisite
+ components installed on vanilla Ubuntu. These include the following:
+ 
+  * gdbm - Berkley SQL Database
+  * LZMA compression
+  * ctypes - this seems to be an error
+
+**********
+Principles
+**********
+
+This is a quick survey of the principles of software architecture that is
+intended to help us understand why Python states that certain bits are missing
+and help us to identify the components that we need to satisfy the Python
+requirements.
+
+**********************
+Installation Procedure
+**********************
+
+The installation procedure is written as a Bash script. I would have preferred
+to write it in Python but I have to write a lot of low level generic modules
+before it becomes practical to write command line scripts in Python. The really
+low level pieces are present in Python but the higher level capabilities such
+as the handling of commands and pipes are missing.
+
+**************************
+Acquire Python Source Code
+**************************
+
+************************
+Find Out What Is Missing
+************************

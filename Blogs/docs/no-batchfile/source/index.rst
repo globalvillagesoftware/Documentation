@@ -1,0 +1,17 @@
+##################################
+Welcome to the Global Village Blog
+##################################
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+   
+   2020-05-27
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

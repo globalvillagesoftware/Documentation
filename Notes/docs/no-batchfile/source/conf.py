@@ -3,9 +3,8 @@
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-from docutils.parsers import rst
 
-# -- Path setup --------------------------------------------------------------
+# -- Path setup
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -17,17 +16,17 @@ import sys
 sys.path.insert(0, os.path.abspath('../../../src'))
 
 
-# -- Project information -----------------------------------------------------
+# -- Project information
 
 project = 'Global Village Environment Concepts'
 author = 'Jonathan Gossage'
-copyright = f'2020, {author}'
+copyright = f'2020, {author}'  # @ReservedAssignment
 
 # The full version, including alpha/beta/rc tags
 release = '0.1.0'
 
 
-# -- General configuration ---------------------------------------------------
+# -- General configuration
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -55,12 +54,12 @@ rst_prolog = """
 
    <br />
 
-.. |gv| replace:: *Global Village*   
+.. |gv| replace:: *Global Village*
 """
 
 # These are links to external documents and services that can be accessed from
 # any document in the Global Village document system.
-rst_epilog =  """
+rst_epilog = """
 .. _Python:  https://www.python.org/
 .. _Python Package Index: https://pypi.org
 .. _JSON: https://www.json.org/json-en.html
@@ -69,7 +68,7 @@ rst_epilog =  """
 """
 
 
-# -- Options for HTML output -------------------------------------------------
+# -- Options for HTML output
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -85,7 +84,7 @@ html_static_path = ['_static']
 # Sphinx
 html_css_files = ['css/custom.css']
 
-# Options that control hw the sphinx_rtd_theme displays.
+# Options that control the sphinx_rtd_theme displays.
 html_theme_options = {
     'prev_next_buttons_location': 'both',
     'collapse_navigation': False,
@@ -95,17 +94,17 @@ html_theme_options = {
     'titles_only': False,
     'style_nav_header_background': 'moccasin',
     'sticky_navigation': True,
-    'includehidden': False  
+    'includehidden': False
 }
 
-# -- Extension configuration -------------------------------------------------
+# -- Extension configuration
 
-# -- Options for intersphinx extension ---------------------------------------
+# -- Options for intersphinx extension
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/3/': None}
 
-# -- Options for todo extension ----------------------------------------------
+# -- Options for todo extension
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True

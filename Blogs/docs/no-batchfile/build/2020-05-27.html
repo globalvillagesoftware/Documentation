@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install Python 3.8.3 on Ubuntu 20.04 Desktop &mdash; Global Village Blogs 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Speculations on the Future of Software Development" href="2020-06-01.html" />
+    <link rel="prev" title="Welcome to the Global Village Blog" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: moccasin" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Global Village Blogs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install Python 3.8.3 on Ubuntu 20.04 Desktop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#principles">Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-procedure">Installation Procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acquire-python-source-code">Acquire <cite>Python</cite> Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-out-what-is-missing">Find Out What Is Missing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2020-06-01.html">Speculations on the Future of Software Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2020-06-01.html#what-a-programming-system-has-to-do">What A Programming System Has To Do</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-06-01.html#types-of-language">Types of Language</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2020-06-01.html#static-languages">Static Languages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2020-06-01.html#dynamic-languages">Dynamic Languages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2020-06-01.html#historical-practice">Historical Practice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2020-06-01.html#programming-with-toggle-switches-and-machine-language">Programming with toggle switches and machine language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2020-06-01.html#assembler-and-machine-language">Assembler and Machine Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2020-06-01.html#high-level-languages">High Level languages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="2020-06-01.html#high-level-language-development-environment">High level language development environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2020-06-01.html#high-level-language-development-history">High level language development history</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2020-06-01.html#conventional-programming-languages">Conventional Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-06-01.html#structure-first-idiom">Structure-First Idiom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-06-01.html#integrated-application-environment">Integrated Application Environment</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Global Village Blogs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Install Python 3.8.3 on Ubuntu 20.04 Desktop</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2020-05-27.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="2020-06-01.html" class="btn btn-neutral float-right" title="Speculations on the Future of Software Development" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the Global Village Blog" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="install-python-3-8-3-on-ubuntu-20-04-desktop">
+<h1>Install Python 3.8.3 on Ubuntu 20.04 Desktop<a class="headerlink" href="#install-python-3-8-3-on-ubuntu-20-04-desktop" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This turns out to be quite a laborious job. This is due to a number of corner cases that are
+encountered when installing <cite>Python</cite> on <cite>Linux</cite> and it all has to be done manually from the command
+line. Therefore, I felt it was useful to document a successful full installation of <cite>Python</cite> on
+<cite>Ubuntu</cite>.</p>
+<p>The reasons for difficulty include:</p>
+<ul>
+<li><p><cite>Python</cite> for <cite>Linux</cite> must be built and installed from source code.</p></li>
+<li><p><cite>Ubuntu</cite> already has <cite>Python 3.8.2</cite> installed and it is used for many components of <cite>Ubuntu</cite>. It
+is important that the default installation of <cite>Python</cite> on <cite>Ubuntu</cite> should not be disrupted by the
+installation of another version of <cite>Python</cite>.</p>
+<p><cite>Python</cite> includes a number of optional modules. These modules are not compiled unless the source
+prerequisites for these modules are present on <cite>Ubuntu</cite>. If you want a complete version of
+<cite>Python</cite> you will need to install the  dependencies of these modules before compiling <cite>Python</cite>.
+The compile process suggests that you look in the function <cite>detect-modules</cite> in the source file
+<cite>setup.py</cite> for the module names of the necessary prerequisites but the tests contained there are
+testing whether components within the source dependencies are available, and this gives little
+guidance or help on finding the source dependeny names themselves. You are on your own here.</p>
+</li>
+</ul>
+<blockquote>
+<div><p>There are several optional modules that do not have their prerequisite components installed on
+vanilla <cite>Ubuntu</cite>. These include the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>gdbm</cite>     - <strong>Berkley</strong> <cite>SQL</cite> Database</p></li>
+<li><p><cite>LZMA</cite>    - data compression</p></li>
+<li><p><cite>ctypes</cite> - this seems to be an error in obtaining the required sources</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="principles">
+<h2>Principles<a class="headerlink" href="#principles" title="Permalink to this headline">¶</a></h2>
+<p>This is a quick survey of the principles of software architecture that is intended to help us
+understand why <cite>Python</cite> states that certain bits are missing and help us to identify the components
+that we need to satisfy the <cite>Python</cite> requirements.</p>
+</div>
+<div class="section" id="installation-procedure">
+<h2>Installation Procedure<a class="headerlink" href="#installation-procedure" title="Permalink to this headline">¶</a></h2>
+<p>The installation procedure is written as a <cite>Bash</cite> script. I would have preferred to write it
+in <cite>Python</cite> but I have to write a lot of low level generic modules before it becomes practical to
+write command line scripts in <cite>Python</cite>. The really low level pieces are present in <cite>Python</cite> but the
+higher level capabilities such as the handling of commands and pipes are missing.</p>
+</div>
+<div class="section" id="acquire-python-source-code">
+<h2>Acquire <cite>Python</cite> Source Code<a class="headerlink" href="#acquire-python-source-code" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="find-out-what-is-missing">
+<h2>Find Out What Is Missing<a class="headerlink" href="#find-out-what-is-missing" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2020-06-01.html" class="btn btn-neutral float-right"
+          title="Speculations on the Future of Software Development" accesskey="n" rel="next">
+          Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left"
+          title="Welcome to the Global Village Blog" accesskey="p" rel="prev">
+          <span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+<!--
+  <hr/>
+
+-->  
+  <div class="gvfooter" role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jonathan Gossage
+    </p> 
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License"
+          style="border-width:0"
+          src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
+        />
+      </a>
+      <br>
+      This work is licensed under a 
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        Creative Commons Attribution-ShareAlike 4.0 International License
+      </a>
+    
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

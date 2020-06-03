@@ -1,0 +1,272 @@
+##################################################
+Speculations on the Future of Software Development
+##################################################
+
+This blog post looks at the problems that have arisen as a result of using a sub-set of human
+language as a vehicle for software development and suggests possible routes for improvement. I fully
+recognize that some of these suggestions might take up to 20 years to realize.
+
+***********************************
+What A Programming System Has To Do
+***********************************
+
+There are a number of things that a programming system must do if a program is to be written and
+used:
+
+* Facilitate the encoding of the solution to a problem |br| 
+  A big problem is translating a problem definition into a solution based on a computer. We have
+  progressed from a time when the solution to the problem was the only concern to a time when the
+  problem definition and it's translation into a solution, using a programming language, is becoming
+  part of the process.
+* Represent the block structure of the program |br| 
+  A program is a set of nested blocks that contain the other elements that make up a program. The
+  block structure of the program must be made apparent to the programmer.
+* Represent the logical flow of computer processing |br|
+  Programs are full of conditional blocks of code that are only executed when specified conditions
+  are met. These conditional blocks and their controls must be fully visible.
+* Express language idioms |br|
+  Every language has idioms that make it easier to specify complex operations such as `Python` `list
+  comprehensions`. These operations must be clearly represented in the program code.
+* Specify computations |br| 
+  Part of the function of many programs is to perform calculations. The language must support the
+  specification of the calculations in an understandable manner.
+* Comment the code |br| 
+  Programming languages need a way of adding comments to the program that explain what is happening.
+* Invoke external library modules |br| 
+  A large part of the functionality of a program is not written by the programmer. It comes from a
+  variety of external sources and is combined with new code developed by the software developer to
+  provide the needed functionality of an application. These external components must integrate
+  smoothly into the developer's software development environment.
+
+  * Libraries that are supplied by the implementor of the programming environment being used
+  * Libraries that are implemented and maintained by the software development organization that
+    supports the developer
+  * 3rd. party libraries that are compatible with the programmer's software development environment
+
+* Present the program to a programmer on a computer screen |br| 
+  Both now and in the past, the primary method of communication between the software developer and
+  the environment on a computer has been the keyboard, mouse and graphics monitor. This is unlikely
+  to change in the near future, even though it might be augmented by such technologies such as voice
+  recognition or virtual reality headsets which provide some interesting possibilities. For the
+  foreseeable future, I believe that the traditional technologies will dominate the programming 
+  scene.
+* Provide tools for debugging |br| 
+  Tools are needed to allow the program execution state at any point to be examined to try and
+  determine why a program is not functioning correctly.
+
+*****************
+Types of Language
+*****************
+
+There are two major types of language that have developed over time. They are oriented towards
+solving particular types of problems.
+
+Static Languages
+================
+
+Static languages were the first type of language to appear. They assume that the runtime environment
+and the structure of the program remain constant over time. They reflect the fact that they are
+being asked to help solve static problems where neither the problem itself nor the environment in
+which the problem is embedded is changeable. Classic examples of this type of programming language
+are `Fortran` and `C`.
+
+Dynamic Languages
+=================
+
+Dynamic languages are used in situations of change as when the problem or the environment changes
+during execution of the program. Such problems require that the program be capable of modifying
+itself to deal with the new conditions. Dynamic languages include those that support dynamic typing.
+These languages do not insist that variables that point to objects always contain objects of the
+same type. These languages may otherwise be static in their nature. Classic examples of dynamic 
+programming language include `Lisp` and `Python`.
+
+*******************
+Historical Practice
+*******************
+
+Here I take a look at how programming tools have evolved from the beginnings of computers to the
+present day.
+
+Programming with toggle switches and machine language
+=====================================================
+
+This was the first stage of communication between humans and computers. You needed to know the
+instruction set of the computer you were using and you had to manually enter the program that you
+wanted to run into the computer, using binary encoding, through toggle switches. This was obviously
+a very error-prone and tedious process.
+
+Assembler and Machine Language
+==============================
+
+The next stage in communication was the use of assembly language. These were textual representations
+of the computer program, consisting of a line of text describing each machine instruction and how it
+was to be used. Typically, one coded the program on paper which was turned into a deck of cards by a
+key-punch operator. The deck of cards was then read into the computer by a program called an
+assembler that translated the textual representation into binary machine instructions and then ran
+the program. This procedure, while still tedious, was much less error-prone than the original method
+of communication.
+
+High Level languages
+====================
+
+High level languages were the next step. They were an attempt to describe the program, textually, in
+a manner that was closer to the actual definition of the problem than to the machine instructions
+that implemented the program that, hopefully, solved the problem.
+
+A historical presentation of thee use and evolution of these programming languages follows. The
+languages are presented in the order that they appeared. The list is far from complete. A language
+is discussed here if it was of historical importance or if it presented some concepts that were new
+for the time. By examining the appearance of new programming language features we can see how
+programming languages evolved over time. All of the languages discussed here are still in use and
+have evolved greatly since their beginnings, taking new ideas from each other and from other
+sources. I, personally, have used most of the languages presented here except for `Haskell` and
+`Prolog`. In addition, I have used assembler language for assorted computers. Today I work primarily
+in `Python`.
+
+High level language development environment
+-------------------------------------------
+
+High level languages, from their inception, have always used a number of tools to permit the
+development process to take place. These tools evolved along side the development of the languages
+themselves. This summary is presented here to help understand how language use is supported in a
+software development environment.
+
+Editor
+^^^^^^
+
+The editor is the tool that supports the actual writing of the computer program. It has evolved
+significantly over time. The first editors were constrained by the environment in which they had to
+work. They had to operate on text based, line oriented terminals so they integrated these
+constraints into their mode of operation. The constraints were partially due to the environment that
+they worked in but also to the nature of the programming languages that they worked with which were
+textual, line oriented languages. Examples of this type of interface that are used today include
+systems like `Emacs` on `Linux` and `Notepad++` on `Windows`.
+
+Today, a new breed of editors has appeared. They are still geared to producing text based output as
+were their predecessors, but they are integrated into a modern `Graphical User Interface (GUI)` that
+gives them a new visual appearance and mode of operation. Even with these changes, they are
+fundamentally the same as the older fashioned editors. Modern examples tend to be embedded in
+Integrated Development Environments as discussed below. One good modern example that is not so
+embedded is Visual Studio Code from Microsoft which is now available on all major modern operating
+system platforms such as `Windows`, `Linux`, and `MacOS`
+
+Compiler
+^^^^^^^^
+
+This component takes the output from an editor and translates it into an internal form depending on
+the nature of the programming language and the environment. Examples of this internal format
+include:
+
+* Machine Language |br| 
+  Most static programming languages compile directly to machine code. The resultant program is ready
+  for use almost immediately. This is ample for many programs that do not change their nature during
+  execution.
+* Bytecode |br| 
+  Some programming languages such as `Java` offer the facility of writing the program once but of
+  having the ability to run the program anywhere, so long as the platform is supported by `Java`.
+  These programs compile to a form of intermediate language known as bytecode that is platform
+  independent. The bytecode is either interpreted at runtime, or it is translated to machine code
+  when the program is installed on a target system. The second option maximizes the performance of
+  the program by avoiding runtime processing to interpret the bytecode.
+* Intermediate Language |br| 
+  Most dynamic languages make use of an intermediate language internally. Because they modify
+  themselves in various ways, it has been found to be easier to actually modify the internal
+  language at runtime than it is to modify the machine code. Such languages are often called
+  interpreted languages because they use a program tool known as an interpreter that translates the
+  intermediate language into machine code when needed.
+
+Linker
+^^^^^^
+
+Debugger
+^^^^^^^^
+
+Runtime
+^^^^^^^
+
+Integrated development environment - IDE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+High level language development history
+---------------------------------------
+
+A selection of the most important languages is given here. It grew substantially during the writing
+of this post because I wanted to show the evolution of programming ideas clearly.
+
+Fortran - 1957
+^^^^^^^^^^^^^^
+
+Lisp - 1958
+^^^^^^^^^^^
+
+Cobol -1960
+^^^^^^^^^^^
+
+Algol 60 - 1960
+^^^^^^^^^^^^^^^
+
+RPG - 1960
+^^^^^^^^^^
+
+Basic - 1964
+^^^^^^^^^^^^
+
+PL/I - 1966
+^^^^^^^^^^^
+
+Algol 68 - 1968
+^^^^^^^^^^^^^^^
+
+Pascal - 1970
+^^^^^^^^^^^^^
+
+C - 1973
+^^^^^^^^
+
+Prolog - 1974?
+^^^^^^^^^^^^^^
+
+Smalltalk - 1980
+^^^^^^^^^^^^^^^^
+
+C++ - 1985
+^^^^^^^^^^
+
+Bash - 1989
+^^^^^^^^^^^
+
+Python - 1990
+^^^^^^^^^^^^^
+
+Haskell - 1990
+^^^^^^^^^^^^^^
+
+JavaScript - 1995
+^^^^^^^^^^^^^^^^^
+
+Java - 1996
+^^^^^^^^^^^
+
+Power Shell - 2006
+^^^^^^^^^^^^^^^^^^
+
+**********************************
+Conventional Programming Languages
+**********************************
+
+This section examines the language based methods that are currently used to define what a program is
+expected to do.
+
+*********************
+Structure-First Idiom
+*********************
+
+This section provides some suggestions on how a programming idiom could best support the creation
+and maintenance of programs and avoid the problems generated by the use of conventional programming
+languages.
+
+**********************************
+Integrated Application Environment
+**********************************
+
+Here, I pull all the ideas together and speculate on what might be possible.

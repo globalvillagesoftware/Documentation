@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Speculations on the Future of Software Development &mdash; Global Village Blogs 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Install Python 3.8.3 on Ubuntu 20.04 Desktop" href="2020-05-27.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: moccasin" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Global Village Blogs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="2020-05-27.html">Install Python 3.8.3 on Ubuntu 20.04 Desktop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2020-05-27.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-05-27.html#principles">Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-05-27.html#installation-procedure">Installation Procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-05-27.html#acquire-python-source-code">Acquire <cite>Python</cite> Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2020-05-27.html#find-out-what-is-missing">Find Out What Is Missing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Speculations on the Future of Software Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-a-programming-system-has-to-do">What A Programming System Has To Do</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-language">Types of Language</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#static-languages">Static Languages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-languages">Dynamic Languages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#historical-practice">Historical Practice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#programming-with-toggle-switches-and-machine-language">Programming with toggle switches and machine language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assembler-and-machine-language">Assembler and Machine Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-languages">High Level languages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#high-level-language-development-environment">High level language development environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#high-level-language-development-history">High level language development history</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conventional-programming-languages">Conventional Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#structure-first-idiom">Structure-First Idiom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integrated-application-environment">Integrated Application Environment</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Global Village Blogs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Speculations on the Future of Software Development</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2020-06-01.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+      
+        <a href="2020-05-27.html" class="btn btn-neutral float-left" title="Install Python 3.8.3 on Ubuntu 20.04 Desktop" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="speculations-on-the-future-of-software-development">
+<h1>Speculations on the Future of Software Development<a class="headerlink" href="#speculations-on-the-future-of-software-development" title="Permalink to this headline">¶</a></h1>
+<p>This blog post looks at the problems that have arisen as a result of using a sub-set of human
+language as a vehicle for software development and suggests possible routes for improvement. I fully
+recognize that some of these suggestions might take up to 20 years to realize.</p>
+<div class="section" id="what-a-programming-system-has-to-do">
+<h2>What A Programming System Has To Do<a class="headerlink" href="#what-a-programming-system-has-to-do" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of things that a programming system must do if a program is to be written and
+used:</p>
+<ul class="simple">
+<li><p>Facilitate the encoding of the solution to a problem <br />
+A big problem is translating a problem definition into a solution based on a computer. We have
+progressed from a time when the solution to the problem was the only concern to a time when the
+problem definition and it’s translation into a solution, using a programming language, is becoming
+part of the process.</p></li>
+<li><p>Represent the block structure of the program <br />
+A program is a set of nested blocks that contain the other elements that make up a program. The
+block structure of the program must be made apparent to the programmer.</p></li>
+<li><p>Represent the logical flow of computer processing <br />
+Programs are full of conditional blocks of code that are only executed when specified conditions
+are met. These conditional blocks and their controls must be fully visible.</p></li>
+<li><p>Express language idioms <br />
+Every language has idioms that make it easier to specify complex operations such as <cite>Python</cite> <cite>list
+comprehensions</cite>. These operations must be clearly represented in the program code.</p></li>
+<li><p>Specify computations <br />
+Part of the function of many programs is to perform calculations. The language must support the
+specification of the calculations in an understandable manner.</p></li>
+<li><p>Comment the code <br />
+Programming languages need a way of adding comments to the program that explain what is happening.</p></li>
+<li><p>Invoke external library modules <br />
+A large part of the functionality of a program is not written by the programmer. It comes from a
+variety of external sources and is combined with new code developed by the software developer to
+provide the needed functionality of an application. These external components must integrate
+smoothly into the developer’s software development environment.</p>
+<ul>
+<li><p>Libraries that are supplied by the implementor of the programming environment being used</p></li>
+<li><p>Libraries that are implemented and maintained by the software development organization that
+supports the developer</p></li>
+<li><p>3rd. party libraries that are compatible with the programmer’s software development environment</p></li>
+</ul>
+</li>
+<li><p>Present the program to a programmer on a computer screen <br />
+Both now and in the past, the primary method of communication between the software developer and
+the environment on a computer has been the keyboard, mouse and graphics monitor. This is unlikely
+to change in the near future, even though it might be augmented by such technologies such as voice
+recognition or virtual reality headsets which provide some interesting possibilities. For the
+foreseeable future, I believe that the traditional technologies will dominate the programming
+scene.</p></li>
+<li><p>Provide tools for debugging <br />
+Tools are needed to allow the program execution state at any point to be examined to try and
+determine why a program is not functioning correctly.</p></li>
+</ul>
+</div>
+<div class="section" id="types-of-language">
+<h2>Types of Language<a class="headerlink" href="#types-of-language" title="Permalink to this headline">¶</a></h2>
+<p>There are two major types of language that have developed over time. They are oriented towards
+solving particular types of problems.</p>
+<div class="section" id="static-languages">
+<h3>Static Languages<a class="headerlink" href="#static-languages" title="Permalink to this headline">¶</a></h3>
+<p>Static languages were the first type of language to appear. They assume that the runtime environment
+and the structure of the program remain constant over time. They reflect the fact that they are
+being asked to help solve static problems where neither the problem itself nor the environment in
+which the problem is embedded is changeable. Classic examples of this type of programming language
+are <cite>Fortran</cite> and <cite>C</cite>.</p>
+</div>
+<div class="section" id="dynamic-languages">
+<h3>Dynamic Languages<a class="headerlink" href="#dynamic-languages" title="Permalink to this headline">¶</a></h3>
+<p>Dynamic languages are used in situations of change as when the problem or the environment changes
+during execution of the program. Such problems require that the program be capable of modifying
+itself to deal with the new conditions. Dynamic languages include those that support dynamic typing.
+These languages do not insist that variables that point to objects always contain objects of the
+same type. These languages may otherwise be static in their nature. Classic examples of dynamic
+programming language include <cite>Lisp</cite> and <cite>Python</cite>.</p>
+</div>
+</div>
+<div class="section" id="historical-practice">
+<h2>Historical Practice<a class="headerlink" href="#historical-practice" title="Permalink to this headline">¶</a></h2>
+<p>Here I take a look at how programming tools have evolved from the beginnings of computers to the
+present day.</p>
+<div class="section" id="programming-with-toggle-switches-and-machine-language">
+<h3>Programming with toggle switches and machine language<a class="headerlink" href="#programming-with-toggle-switches-and-machine-language" title="Permalink to this headline">¶</a></h3>
+<p>This was the first stage of communication between humans and computers. You needed to know the
+instruction set of the computer you were using and you had to manually enter the program that you
+wanted to run into the computer, using binary encoding, through toggle switches. This was obviously
+a very error-prone and tedious process.</p>
+</div>
+<div class="section" id="assembler-and-machine-language">
+<h3>Assembler and Machine Language<a class="headerlink" href="#assembler-and-machine-language" title="Permalink to this headline">¶</a></h3>
+<p>The next stage in communication was the use of assembly language. These were textual representations
+of the computer program, consisting of a line of text describing each machine instruction and how it
+was to be used. Typically, one coded the program on paper which was turned into a deck of cards by a
+key-punch operator. The deck of cards was then read into the computer by a program called an
+assembler that translated the textual representation into binary machine instructions and then ran
+the program. This procedure, while still tedious, was much less error-prone than the original method
+of communication.</p>
+</div>
+<div class="section" id="high-level-languages">
+<h3>High Level languages<a class="headerlink" href="#high-level-languages" title="Permalink to this headline">¶</a></h3>
+<p>High level languages were the next step. They were an attempt to describe the program, textually, in
+a manner that was closer to the actual definition of the problem than to the machine instructions
+that implemented the program that, hopefully, solved the problem.</p>
+<p>A historical presentation of thee use and evolution of these programming languages follows. The
+languages are presented in the order that they appeared. The list is far from complete. A language
+is discussed here if it was of historical importance or if it presented some concepts that were new
+for the time. By examining the appearance of new programming language features we can see how
+programming languages evolved over time. All of the languages discussed here are still in use and
+have evolved greatly since their beginnings, taking new ideas from each other and from other
+sources. I, personally, have used most of the languages presented here except for <cite>Haskell</cite> and
+<cite>Prolog</cite>. In addition, I have used assembler language for assorted computers. Today I work primarily
+in <cite>Python</cite>.</p>
+<div class="section" id="high-level-language-development-environment">
+<h4>High level language development environment<a class="headerlink" href="#high-level-language-development-environment" title="Permalink to this headline">¶</a></h4>
+<p>High level languages, from their inception, have always used a number of tools to permit the
+development process to take place. These tools evolved along side the development of the languages
+themselves. This summary is presented here to help understand how language use is supported in a
+software development environment.</p>
+<div class="section" id="editor">
+<h5>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h5>
+<p>The editor is the tool that supports the actual writing of the computer program. It has evolved
+significantly over time. The first editors were constrained by the environment in which they had to
+work. They had to operate on text based, line oriented terminals so they integrated these
+constraints into their mode of operation. The constraints were partially due to the environment that
+they worked in but also to the nature of the programming languages that they worked with which were
+textual, line oriented languages. Examples of this type of interface that are used today include
+systems like <cite>Emacs</cite> on <cite>Linux</cite> and <cite>Notepad++</cite> on <cite>Windows</cite>.</p>
+<p>Today, a new breed of editors has appeared. They are still geared to producing text based output as
+were their predecessors, but they are integrated into a modern <cite>Graphical User Interface (GUI)</cite> that
+gives them a new visual appearance and mode of operation. Even with these changes, they are
+fundamentally the same as the older fashioned editors. Modern examples tend to be embedded in
+Integrated Development Environments as discussed below. One good modern example that is not so
+embedded is Visual Studio Code from Microsoft which is now available on all major modern operating
+system platforms such as <cite>Windows</cite>, <cite>Linux</cite>, and <cite>MacOS</cite></p>
+</div>
+<div class="section" id="compiler">
+<h5>Compiler<a class="headerlink" href="#compiler" title="Permalink to this headline">¶</a></h5>
+<p>This component takes the output from an editor and translates it into an internal form depending on
+the nature of the programming language and the environment. Examples of this internal format
+include:</p>
+<ul class="simple">
+<li><p>Machine Language <br />
+Most static programming languages compile directly to machine code. The resultant program is ready
+for use almost immediately. This is ample for many programs that do not change their nature during
+execution.</p></li>
+<li><p>Bytecode <br />
+Some programming languages such as <cite>Java</cite> offer the facility of writing the program once but of
+having the ability to run the program anywhere, so long as the platform is supported by <cite>Java</cite>.
+These programs compile to a form of intermediate language known as bytecode that is platform
+independent. The bytecode is either interpreted at runtime, or it is translated to machine code
+when the program is installed on a target system. The second option maximizes the performance of
+the program by avoiding runtime processing to interpret the bytecode.</p></li>
+<li><p>Intermediate Language <br />
+Most dynamic languages make use of an intermediate language internally. Because they modify
+themselves in various ways, it has been found to be easier to actually modify the internal
+language at runtime than it is to modify the machine code. Such languages are often called
+interpreted languages because they use a program tool known as an interpreter that translates the
+intermediate language into machine code when needed.</p></li>
+</ul>
+</div>
+<div class="section" id="linker">
+<h5>Linker<a class="headerlink" href="#linker" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="debugger">
+<h5>Debugger<a class="headerlink" href="#debugger" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="runtime">
+<h5>Runtime<a class="headerlink" href="#runtime" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="integrated-development-environment-ide">
+<h5>Integrated development environment - IDE<a class="headerlink" href="#integrated-development-environment-ide" title="Permalink to this headline">¶</a></h5>
+</div>
+</div>
+<div class="section" id="high-level-language-development-history">
+<h4>High level language development history<a class="headerlink" href="#high-level-language-development-history" title="Permalink to this headline">¶</a></h4>
+<p>A selection of the most important languages is given here. It grew substantially during the writing
+of this post because I wanted to show the evolution of programming ideas clearly.</p>
+<div class="section" id="fortran-1957">
+<h5>Fortran - 1957<a class="headerlink" href="#fortran-1957" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="lisp-1958">
+<h5>Lisp - 1958<a class="headerlink" href="#lisp-1958" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="cobol-1960">
+<h5>Cobol -1960<a class="headerlink" href="#cobol-1960" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="algol-60-1960">
+<h5>Algol 60 - 1960<a class="headerlink" href="#algol-60-1960" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="rpg-1960">
+<h5>RPG - 1960<a class="headerlink" href="#rpg-1960" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="basic-1964">
+<h5>Basic - 1964<a class="headerlink" href="#basic-1964" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="pl-i-1966">
+<h5>PL/I - 1966<a class="headerlink" href="#pl-i-1966" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="algol-68-1968">
+<h5>Algol 68 - 1968<a class="headerlink" href="#algol-68-1968" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="pascal-1970">
+<h5>Pascal - 1970<a class="headerlink" href="#pascal-1970" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="c-1973">
+<h5>C - 1973<a class="headerlink" href="#c-1973" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="prolog-1974">
+<h5>Prolog - 1974?<a class="headerlink" href="#prolog-1974" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="smalltalk-1980">
+<h5>Smalltalk - 1980<a class="headerlink" href="#smalltalk-1980" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="c-1985">
+<h5>C++ - 1985<a class="headerlink" href="#c-1985" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="bash-1989">
+<h5>Bash - 1989<a class="headerlink" href="#bash-1989" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="python-1990">
+<h5>Python - 1990<a class="headerlink" href="#python-1990" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="haskell-1990">
+<h5>Haskell - 1990<a class="headerlink" href="#haskell-1990" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="javascript-1995">
+<h5>JavaScript - 1995<a class="headerlink" href="#javascript-1995" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="java-1996">
+<h5>Java - 1996<a class="headerlink" href="#java-1996" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="power-shell-2006">
+<h5>Power Shell - 2006<a class="headerlink" href="#power-shell-2006" title="Permalink to this headline">¶</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conventional-programming-languages">
+<h2>Conventional Programming Languages<a class="headerlink" href="#conventional-programming-languages" title="Permalink to this headline">¶</a></h2>
+<p>This section examines the language based methods that are currently used to define what a program is
+expected to do.</p>
+</div>
+<div class="section" id="structure-first-idiom">
+<h2>Structure-First Idiom<a class="headerlink" href="#structure-first-idiom" title="Permalink to this headline">¶</a></h2>
+<p>This section provides some suggestions on how a programming idiom could best support the creation
+and maintenance of programs and avoid the problems generated by the use of conventional programming
+languages.</p>
+</div>
+<div class="section" id="integrated-application-environment">
+<h2>Integrated Application Environment<a class="headerlink" href="#integrated-application-environment" title="Permalink to this headline">¶</a></h2>
+<p>Here, I pull all the ideas together and speculate on what might be possible.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="2020-05-27.html" class="btn btn-neutral float-left"
+          title="Install Python 3.8.3 on Ubuntu 20.04 Desktop" accesskey="p" rel="prev">
+          <span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+<!--
+  <hr/>
+
+-->  
+  <div class="gvfooter" role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jonathan Gossage
+    </p> 
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License"
+          style="border-width:0"
+          src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
+        />
+      </a>
+      <br>
+      This work is licensed under a 
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        Creative Commons Attribution-ShareAlike 4.0 International License
+      </a>
+    
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

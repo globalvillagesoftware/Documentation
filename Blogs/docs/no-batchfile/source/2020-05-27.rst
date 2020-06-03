@@ -2,10 +2,6 @@
 Install Python 3.8.3 on Ubuntu 20.04 Desktop
 ############################################
 
-********
-Overview
-********
-
 This turns out to be quite a laborious job. This is due to a number of corner cases that are
 encountered when installing `Python` on `Linux` and it all has to be done manually from the command
 line. Therefore, I felt it was useful to document a successful full installation of `Python` on
@@ -24,36 +20,74 @@ The reasons for difficulty include:
   The compile process suggests that you look in the function `detect-modules` in the source file
   `setup.py` for the module names of the necessary prerequisites but the tests contained there are
   testing whether components within the source dependencies are available, and this gives little
-  guidance or help on finding the source dependeny names themselves. You are on your own here.
+  guidance or help on finding the source dependency names themselves. You are on your own here.
  
  There are several optional modules that do not have their prerequisite components installed on
- vanilla `Ubuntu`. These include the following:
+ vanilla `Ubuntu`. Since these are optional modules and you may not need them all on your system,
+ the dependencies for each optional module are included so that you can easily pick and choose the
+ optional modules that you want.
+ These include the following:
  
-  * `gdbm`     - **Berkley** `SQL` Database
-  * `LZMA`    - data compression
-  * `ctypes` - this seems to be an error in obtaining the required sources
+  * `gdbm`     - **Berkley** `SQL` Database otherwise known as dbm
+  
+    * `libgdbm-dev`
+    * `libocsigenserver-ocaml-dev`
+    * `libopenipmi-dev`
+    * `freebsd-glue`
 
-**********
-Principles
-**********
+  * `lzma`
+    * `liblzma-dev`
+    * `lzma`
 
-This is a quick survey of the principles of software architecture that is intended to help us
-understand why `Python` states that certain bits are missing and help us to identify the components
-that we need to satisfy the `Python` requirements.
+  * `readline`
+  
+     * `libreadline-gplv2-dev`
 
-**********************
-Installation Procedure
-**********************
+  * `curses`
+  
+    * `libncursesw5-dev`
+  
+  *`openssl`
+  
+    * `libssl-dev`
+  
+  * `sqlite`
+  
+    * `libsqlite3-dev`
+  
+  * `tcl/tk`
+  
+    * `tk-dev`
+  
+  * `bz2`
+  
+    * `libbz2-dev`
 
-The installation procedure is written as a `Bash` script. I would have preferred to write it
-in `Python` but I have to write a lot of low level generic modules before it becomes practical to
-write command line scripts in `Python`. The really low level pieces are present in `Python` but the
-higher level capabilities such as the handling of commands and pipes are missing.
+I supply a
+`bash script <https://github.com/globalvillagesoftware/ShellUtilities/blob/master/src/installPython.sh>`
+that you can use to automate the installation of `Python`. This script takes a number of optional
+arguments that allow you to control it's operation:
 
-****************************
-Acquire `Python` Source Code
-****************************
+installPython.sh [-p] [-o] 
 
-************************
-Find Out What Is Missing
-************************
+-d specifies that you want a debugging version of the compiler with no compiler optimization. If it
+   is not specified you get a production version of the compiler with optimizations. You probably
+   want a production compiler unless you are modifying and therefore debugging `Python` itself.
+-o specifies a list of optional modules. If it is not specified, no optional modules will be
+   included. A special value is `all` that indicates that all optional modules are desired.
+   The modules supported are specified as a comma separated list and accept the following names:
+   * `gdbm`
+   * `sqlite`
+   * `lzma`
+   * `bz2`
+   * `readline`
+   * `curses`
+   * `openssl`
+   * `tcl/tk`
+
+Thus `installPython.sh -d -o lzma,bz2` would create an debugging version of the compiler with the
+optional modules `lzma` and `bz2` while `installPython.sh` would create a production version of the
+compiler with no optional modules and `installPython.sh -o all`  would create a production version
+of the compiler with all optional modules included. Unrecognized options make rhe script fail while
+unrecognized optional module names are ignored with a warning. The script returns 1 if a warning was
+issued and 2 if an error occurred.

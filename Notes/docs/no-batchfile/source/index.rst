@@ -29,6 +29,7 @@ application offering of the |gv|.
    virtualEnvironment
    commandRequirements
    pylintEnhancements
+   unix_tools
 
 Indices and tables
 ==================

@@ -1,0 +1,209 @@
+#####################
+Application Structure
+#####################
+
+These are thoughts about how we organize and use information. They consider how to define and
+manage the environment within which we think. My view of this environment is basically hierarchical
+and I have defined a set of components that are, hopefully, useful in managing work within such an
+environment. Here is the definition of one possible hierarchy.
+
+There are some implicit assumptions built into these thoughts that mean that they may need to be
+re-evaluated in other environments. Specifically, these concepts were developed in the context of
+computer programming but, hopefully, are more general in nature. I use `Python` as my software
+development language and I use `Ubuntu`, a `Linux` distribution, as my operating system. I have
+tried to make my thoughts neutral with regards to these elements but they do creep through
+occasionally. Some of the concept presented here are very computer related but I hope to generalize
+them in the future.
+
+*******
+Command
+*******
+
+This is the most basic conceptual level in my hierarchy. Commands are used as components in more
+complex structures, such as networks. The conceptual boundary between a command and a higher level
+construct such as a network is quite fluid. The boundary seems to be associated with the quantity of
+resources needed to implement the command and the complexity of the interrelationships between parts
+of the command. From a computer implementation point of view, a command can be implemented as a
+single process on a single computer.
+
+*******
+Modules
+*******
+
+A module is a specialization of a command that is implemented using the Python programming language.
+It behaves in the same way as a command and can be used in the same way.
+
+Command Types
+=============
+
+Elevated Commands
+-----------------
+
+This is a command that needs special privileges before it can be used. The following example is
+drawn from computer programming. An elevated command is implemented as a combination of the `sudo`
+command and the command that needs elevated privileges in Linux environments. This command type
+behaves in the same way as a basic command. It is presented as a separate concept because these
+thoughts arose from some of my programming activities but I hope that it is a generalizable thought.
+
+Asynchronous Commands
+---------------------
+
+Asynchronous commands do not rely on other commands and, given sufficient resources, may do their
+thing simultaneously with other commands, thus reducing the elapsed time to complete a set of
+commands.
+
+Command Components
+==================
+
+These are the components that make up a command.
+
+Communication
+-------------
+
+All the components in this section are concerned, in one way or another, with managing the process
+of communication between components as well as managing the information that is being communicated.
+
+Save Information
+^^^^^^^^^^^^^^^^
+
+This process is conceptually similar to the process of writing information into a file or database
+on a traditional computer but is more general and is discoupled from the method of implementing the
+component. Only the purpose of the component is important. These components normally accept well
+known classes of information and store the information in a specific place. In other words, they
+know what they expect to get and what to do with the information once they get it. The component may
+be capable of handling many associated pieces of information in the same way, such as a component
+that writes information to a file.
+
+Retrieve Information
+^^^^^^^^^^^^^^^^^^^^
+
+This is similar to reading information from some source. Typically, once you connect to the source
+in some way, you get all the available information. A computer based example is reading data from a
+file.
+
+Question
+^^^^^^^^
+
+Questions are similar to the operations involved in the retrieval and storage of information but
+they are much more general. To ask a question means to request, possibly, some arbitrary piece of
+information and to expect a response with the given information. Sometimes the topics involved in
+question/answer sessions may be restricted for practical reasons such as the service being
+questioned only understands certain topics and thus is unable to respond to general queries.
+Questions are inherently interactive since they involve querying a remote or local service that is
+capable of answering questions and receiving a comprehensible response from that service. This
+implies that both ends of a question type communication have a common method of communicating with
+each other..
+
+Conversation
+^^^^^^^^^^^^
+
+A conversation is a form of communication where information is passed between two parties. It is a
+much more highly developed form of communication between humans than it is between computers or
+between humans and computers. The reason for this is that much of the communication between humans
+has not been formalized and often includes a large non-verbal component that is poorly understood by
+computers. This area is still a subject of research but we can expect some solid improvements in
+this level of understanding in the next few years.
+
+Directives
+^^^^^^^^^^
+
+Directives are instructions to objects demanding that some action be performed. They are not
+necessarily verbal in form. Thus, typing the name of a command on a computer to start a program is a
+directive. They are essentially a unidirectional form of communication between two entities where
+one gives a directive to another to cause something to happen.
+
+Events
+^^^^^^
+
+When anything happens in the world, we can call the fact of the occurrence an event. Events
+frequently happen at random and irregular times. If one wants to be informed of an event, one needs
+to ask an appropriate service to inform us when an event occurs. Thus an event can be thought of as
+a special form of question where it is not known how long it may take to get a response. Events also
+need to consider the possibility that an event may never occur and how to provide a response as well
+as what of response become problems in implementing event notification. Here we have a significant
+decoupling between an event notification request and the response to the event notification, that
+potentially may be generated weeks later. It becomes necessary to deal with such situations as when
+the entity needing the event notification is not connected to the communication channel that
+provides the event notification.
+
+Events can be received from external sources or can be generated by processors in a command.
+
+Much of our interaction with the world is driven by responding to event notifications. 
+
+Processors
+----------
+
+Commands may contain one or more processors. Processors are objects that contain the logic needed to
+handle the command. Processes are related to each other in the sense that they help realize the
+function of the command but they are not tightly coupled to each other and normally will run
+asynchronously to each other. A command that contains multiple processors will typically have one
+processor that serves as a controller of the other processors plus some number of processors that
+actually do the needed work of the command. Typically, multiple processors will run asynchronously
+to each other.The communication components discussed above are attached to specific processors.
+
+Phases
+^^^^^^
+
+Here we give a brief description of the life cycle of a processor. This can be divided into a series
+of phases that occur sequentially. Each phase is responsible for managing and executing a portion of
+the activity that arises when a command is performed.
+
+Initialization
+""""""""""""""
+
+Termination
+"""""""""""
+
+Processing
+""""""""""
+
+********
+Networks
+********
+
+Synchronous Networks
+====================
+
+A network is a set of commands and/or subsidiary networks that are not tightly bound together. Any
+connections are external and dependencies are defined by the fact that all of the commands and
+sub-networks must run in a synchronous fashion. A network may contain other networks as components,
+thus a synchronous network may contain one or more asynchronous networks as components in addition
+to other synchronous networks and independent commands. Combining networks and commands in this way
+can give rise to some very complex communication structures.
+
+Asynchronous Networks
+=====================
+
+The commands in an asynchronous network are not coupled in any way and can run asynchronously with
+any of the other commands in the network. The network is considered to have completed when all
+commands in the network have completed.
+
+Pipelines
+=========
+
+A pipeline is a specialized form of network which can run some types of work very efficiently. It is
+characterized by the production and use of records which may be modified many times before they
+reach their final destination.
+
+The basic idea is that the first program in a pipeline produces a number of records and passes them,
+one-by-one to another program which uses each record in some way and then, potentially, passes the
+record along to another process that handles the record in the same way. Each command can run
+asynchronously to other commands in the pipeline. The net effect is that each process in the
+pipeline can be processing one record at a time and the processing between each command can be
+overlapped. Thus, if sufficient resources are available the time to process all the records through
+the pipeline becomes a function of the time to process the records through a single process plus the
+number of processes in the pipeline. The second factor accounts for the need to drain the pipeline.
+
+A pipeline has both synchronous and asynchronous attributes. It is synchronous and sequential
+because it processes each record in turn. It is asynchronous because parts of the total processing
+happen in parallel as a result of assigning parts of the total workload to individual commands that
+can run in parallel. Traditionally, pipelines only had one line of control through the pipeline
+and each command was connected to a predecessor and a successor, giving what was essentially a
+sequential process that also exhibited a lot of parallelism.
+
+The |gv| is generalizing this concept to allow any component to be both a member of one pipeline
+as well as the start of a subsidiary pipeline. Conceivably, you might have 10 or more pipelines
+starting from the same node, each managing a separate data stream. In the same way, a stream of data
+from one component might be sent to several sub-pipelines. In this case, all sub-pipelines would
+share the same data stream which could either originate at the point of the split or which came from
+upstream of the component that generated the split.

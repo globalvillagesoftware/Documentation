@@ -47,7 +47,7 @@ The reasons for difficulty include:
   
     * `libncursesw5-dev`
   
-  *`openssl`
+  * `openssl`
   
     * `libssl-dev`
   

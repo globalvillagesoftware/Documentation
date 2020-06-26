@@ -75,6 +75,9 @@ Organizational Requirements
 Performance Tests
 -----------------
 
+Fuzz Tests
+----------
+
 ***************
 Blended Testing
 ***************

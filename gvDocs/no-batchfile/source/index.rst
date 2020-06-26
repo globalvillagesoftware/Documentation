@@ -1,15 +1,21 @@
+#########################
+|gv| Formal Documentation
+#########################
 
-Welcome to Global Village FormalDocumentation
-=============================================
+This is the start of the formal documentation for the |gv|. As the
+organization's thoughts mature, they will be added here.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   OrganizationalInformation
+   organizationalInformation
+   applicationEnvironment
+   testingPhilosophy
 
+******************
 Indices and tables
-==================
+******************
 
 * :ref:`genindex`
 * :ref:`search`

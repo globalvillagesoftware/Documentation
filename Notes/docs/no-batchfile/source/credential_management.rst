@@ -2,9 +2,13 @@
 Credential Management
 #####################
 
-********
+**************
+Authentication
+**************
+
 Concepts
-********
+========
+
 In general there are two big problems related to security. These include:
 
 * Keeping data transmission secure |br| 
@@ -44,9 +48,9 @@ Encryption
 Signing
 -------
 
-************
 Requirements
-************
+============
+
 One of the biggest problems in dealing with authentication protocols is the
 variety of authentication methods and associated data used. In |gv|
 the following methods are most significant:
@@ -121,18 +125,16 @@ commonly used authentication mechanism and will be required to support the
 authentication needed when many of the software development functions are
 automated.
 
-******
 Design
-******
+======
 
 Initially, this support will be implemented for a *Linux* platform, but since
 the |gv| is supposed to be platform neutral, it will also be implemented
 for *Windows* as soon as possible to support the continued platform
 independence of the |gv|.
 
-**************
 Implementation
-**************
+==============
 
 The first step in implementation is to install the necessary prerequisites for
 the implementation of this capability. These include the following:

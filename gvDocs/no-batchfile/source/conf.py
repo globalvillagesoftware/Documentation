@@ -12,8 +12,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../../../Infrastructure'))
-
+sys.path.insert(0, os.path.abspath('../../../../../EclipseWorkspaces/Library'))
+print(sys.path)
 
 # -- Project information -----------------------------------------------------
 

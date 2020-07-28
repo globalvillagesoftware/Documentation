@@ -13,6 +13,8 @@ organization's thoughts mature, they will be added here.
    organizationalInformation
    applicationEnvironment
    testingPhilosophy
+   templates
+   versions
    implementation
 
 ******************
